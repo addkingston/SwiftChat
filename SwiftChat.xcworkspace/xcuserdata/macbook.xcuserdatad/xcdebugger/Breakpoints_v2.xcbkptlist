@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E0BF9B9D-6515-42C2-A23A-8315BF9953D3"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F44EE57-6720-4037-9FE2-AA6DEF0BD7FF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftChat/AuthorizationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
+            landmarkName = "login()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "937312FB-1C10-4F8F-8DE0-40E34641BAD5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftChat/AuthorizationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
+            landmarkName = "confirmationView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "937312FB-1C10-4F8F-8DE0-40E34641BAD5 - 4b29842f24ccb334"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.confirmationView.getter : __C.UIView"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "293"
+                  endingLineNumber = "293"
+                  offsetFromSymbolStart = "166">
+               </Location>
+               <Location
+                  uuid = "937312FB-1C10-4F8F-8DE0-40E34641BAD5 - c37fbe9833ffa762"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIView in SwiftChat.AutorizationVC.confirmationView.getter : __C.UIView"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "294"
+                  endingLineNumber = "294"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "937312FB-1C10-4F8F-8DE0-40E34641BAD5 - ab84ff86ed216b20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.confirmationView.setter : __C.UIView"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "293"
+                  endingLineNumber = "293"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "937312FB-1C10-4F8F-8DE0-40E34641BAD5 - 706a8117246c8b72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.confirmationView.modify : __C.UIView"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "937312FB-1C10-4F8F-8DE0-40E34641BAD5 - 3c0069ca95d92320"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.confirmationView.modify : __C.UIView with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "293"
+                  endingLineNumber = "293"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "937312FB-1C10-4F8F-8DE0-40E34641BAD5 - b638539930d8336b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SwiftChat.AutorizationVC"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "293"
+                  endingLineNumber = "293"
+                  offsetFromSymbolStart = "799">
+               </Location>
+               <Location
+                  uuid = "937312FB-1C10-4F8F-8DE0-40E34641BAD5 - ae9146dc801abb27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SwiftChat.AutorizationVC&gt;"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "293"
+                  endingLineNumber = "293"
+                  offsetFromSymbolStart = "741">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "834AD712-4CED-4F9D-A8BD-E67FD67EDF53"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftChat/AuthorizationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
+            landmarkName = "AutorizationVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "834AD712-4CED-4F9D-A8BD-E67FD67EDF53 - f259cd2bb404a7f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.smsConfirmationView.getter : __C.UIView"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "281"
+                  endingLineNumber = "281"
+                  offsetFromSymbolStart = "166">
+               </Location>
+               <Location
+                  uuid = "834AD712-4CED-4F9D-A8BD-E67FD67EDF53 - 16fd158d0b9c5cc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIView in SwiftChat.AutorizationVC.smsConfirmationView.getter : __C.UIView"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "282"
+                  endingLineNumber = "282"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "834AD712-4CED-4F9D-A8BD-E67FD67EDF53 - 4cf92c7c25ae771d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.smsConfirmationView.setter : __C.UIView"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "281"
+                  endingLineNumber = "281"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "834AD712-4CED-4F9D-A8BD-E67FD67EDF53 - d10959b877c49c02"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.smsConfirmationView.modify : __C.UIView"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "834AD712-4CED-4F9D-A8BD-E67FD67EDF53 - 247cb4ecbc739582"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.smsConfirmationView.modify : __C.UIView with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "281"
+                  endingLineNumber = "281"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "834AD712-4CED-4F9D-A8BD-E67FD67EDF53 - b638539930d832d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SwiftChat.AutorizationVC"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "281"
+                  endingLineNumber = "281"
+                  offsetFromSymbolStart = "774">
+               </Location>
+               <Location
+                  uuid = "834AD712-4CED-4F9D-A8BD-E67FD67EDF53 - ae9146dc801aba9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftChat.AutorizationVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SwiftChat.AutorizationVC&gt;"
+                  moduleName = "SwiftChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/SwiftChat/SwiftChat/AuthorizationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "281"
+                  endingLineNumber = "281"
+                  offsetFromSymbolStart = "716">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CAF204E3-0532-4766-B4E6-5BF46FDF2EAB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftChat/ChatVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03AC3804-D6F4-4D0A-8776-036D26DC4AF2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftChat/DialogCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "dialog"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
