@@ -8,6 +8,11 @@
 import UIKit
 import SwiftPhoneNumberFormatter
 
+
+extension Notification.Name {
+    static let gotMessage = Notification.Name("gotMessage")
+}
+
 extension UIColor {
     
     // MARK: UIColor + Colors
@@ -49,6 +54,24 @@ extension UIButton {
         self.setBackgroundImage(imageWithColor(color: color), for: state)
     }
 }
+
+class PaddedTextField: UITextField {
+
+   let padding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 16)
+
+   override open func textRect(forBounds bounds: CGRect) -> CGRect {
+       return bounds.inset(by: padding)
+   }
+
+   override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+       return bounds.inset(by: padding)
+   }
+
+   override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+       return bounds.inset(by: padding)
+   }
+}
+
  class PaddedPhoneTextField: PhoneFormattedTextField {
 
     let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
@@ -133,4 +156,5 @@ extension String {
 
         return ceil(boundingBox.width)
     }
+   
 }

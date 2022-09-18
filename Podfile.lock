@@ -9,7 +9,7 @@ PODS:
 DEPENDENCIES:
   - M13Checkbox
   - NVActivityIndicatorView
-  - Starscream (~> 4.0.0)
+  - Starscream
   - SwiftPhoneNumberFormatter
 
 SPEC REPOS:
@@ -25,6 +25,6 @@ SPEC CHECKSUMS:
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftPhoneNumberFormatter: 0cc91f4daa06dd606a9defb21048a75c36a771a2
 
-PODFILE CHECKSUM: b9964069e53ad52c67d47f19b7d7506aab29f325
+PODFILE CHECKSUM: 082363e2fcde9e05cb8cc4a1112f049c2ca0e66e
 
 COCOAPODS: 1.11.3

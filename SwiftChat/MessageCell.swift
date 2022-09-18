@@ -42,4 +42,5 @@ class MessageCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
 }

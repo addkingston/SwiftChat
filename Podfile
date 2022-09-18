@@ -10,6 +10,6 @@ target 'SwiftChat' do
    pod "M13Checkbox"
    pod "SwiftPhoneNumberFormatter"
    pod "NVActivityIndicatorView"
-   pod "Starscream", "~> 4.0.0"
+   pod "Starscream"
 
 end

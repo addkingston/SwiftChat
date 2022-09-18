@@ -2,16 +2,14 @@
 //  ChatVC.swift
 //  SwiftChat
 //
-//  Created by MacBook on 06.06.2022.
-//
+
 
 import UIKit
 
 class ChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
     
-    
     let screen = UIScreen.main.bounds
-    var messages = ["Hello", "Hi", "How are you today?", "gggggggggggggggggdgdgydgkdjygarfglaerhgflahrflaherflaerfarflrflrf"]
+    var messages = ["Hello", "Hi", "How are you today?"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,29 +31,47 @@ class ChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             print("Font Names = [\(names)]")
         }
         
+        
         NotificationCenter.default.addObserver(
                     self,
                     selector: #selector(keyboardDidHide),
                     name: UIResponder.keyboardWillHideNotification,
                     object: nil
                 )
-        //
                 NotificationCenter.default.addObserver(
                     self,
                     selector: #selector(keyboardDidShow),
                     name: UIResponder.keyboardWillShowNotification,
                     object: nil
                 )
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(gotMessage), name: .gotMessage, object: nil)
+          
     }
         @objc func keyboardDidHide() {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.3) {
                     self.collectionView.contentInset = UIEdgeInsets(top: 70, left: 0, bottom: 0, right: 0)
-//
-//                    self.keyboardView.transform = .identity
+                    
                 }
-                
-        //        collectionView.scrollToItem(at: IndexPath(item: messages.count - 1, section: 0), at: .bottom, animated: true)
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
+                self.keyboardView.transform = .identity
             }
+
+            }
+
+        @objc func gotMessage(_ notification: Notification) {
+            if let userInfo = notification.userInfo as? [String: Any] {
+                print("userInfo")
+                
+                DispatchQueue.main.async {
+                    if let text = userInfo["text"] as? String {
+                        self.messages.append(text)
+                        self.collectionView.reloadData()
+                    }
+                }
+            }
+    }
+    
                     
             @objc func keyboardDidShow(_ notification: Notification) {
                 if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
@@ -64,9 +80,13 @@ class ChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
                     
                 collectionView.contentInset = UIEdgeInsets(top: 70, left: 0, bottom: keyboardHeight, right: 0)
                     collectionView.scrollToItem(at: IndexPath(item: messages.count - 1, section: 0), at: .bottom, animated: true)
-//                    self.keyboardView.transform = CGAffineTransform(translationX: 10, y: 10)
+                    self.keyboardView.transform = CGAffineTransform(translationX: 10, y: -keyboardHeight - 30)
                 }
             }
+    
+    
+    
+    
     
     lazy var sendButton: UIButton = {
        let btn = UIButton()
@@ -75,8 +95,8 @@ class ChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         btn.setBackgroundColor(.clear, for: .highlighted)
         btn.addTarget(self, action: #selector(send), for: .touchUpInside)
         btn.setImage(UIImage(named: "send")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        btn.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        btn.imageView?.tintColor = .white
+        btn.imageEdgeInsets = UIEdgeInsets(top: 10, left: 8, bottom: 8, right: 8)
+        btn.imageView?.tintColor = .systemBlue
         return btn
     }()
     
@@ -86,19 +106,18 @@ class ChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             collectionView.reloadData()
             textField.text = ""
             
-            app.writeText(string: text)
         }
     }
     
     lazy var attachButton: UIButton = {
        let btn = UIButton()
         btn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-        btn.setBackgroundColor(.darkGray, for: .normal)
-        btn.setBackgroundColor(.darkGray, for: .highlighted)
+        btn.setBackgroundColor(.clear, for: .normal)
+        btn.setBackgroundColor(.clear, for: .highlighted)
         btn.addTarget(self, action: #selector(attach), for: .touchUpInside)
         btn.setImage(UIImage(named: "paperclip")?.withRenderingMode(.alwaysTemplate), for: .normal)
         btn.imageView?.tintColor = .white
-        btn.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        btn.imageEdgeInsets = UIEdgeInsets(top: 15, left: 8, bottom: 8, right: 8)
         return btn
     }()
     
@@ -107,36 +126,36 @@ class ChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     lazy var keyboardView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: screen.height - 44, width: screen.width, height: 55))
+        let view = UIView(frame: CGRect(x: -10, y: screen.height - 44, width: screen.width, height: 85))
         view.backgroundColor = UIColor.darkGray
         return view
     }()
-    
-    override var inputAccessoryView: UIView? {
-        return keyboardView
-    }
-    
-    override var canBecomeFirstResponder: Bool {
-        return true
-    }
+//
+//    override var inputAccessoryView: UIView? {
+//        return keyboardView
+//    }
+//
+//    override var canBecomeFirstResponder: Bool {
+//        return true
+//    }
 
     
-    lazy var textField: UITextField = {
-        let tf = UITextField()
-        tf.frame = CGRect(x: 44, y: 2, width: screen.width, height: 44)
+    lazy var textField: PaddedTextField = {
+        let tf = PaddedTextField()
+        tf.frame = CGRect(x: 44, y: 8, width: screen.width - 88, height: 40)
         tf.layer.cornerRadius = 12
-        tf.layer.borderColor = UIColor.systemBlue.cgColor
+        tf.layer.borderColor = UIColor.white.cgColor
         tf.layer.borderWidth = 2
-        tf.backgroundColor = .gray
-        tf.inputAccessoryView = keyboardView
+        tf.attributedPlaceholder = NSAttributedString(string: "Write a message...", attributes: [.foregroundColor: UIColor.white.withAlphaComponent(0.2)])
+        tf.backgroundColor = .black
+//        tf.inputAccessoryView = keyboardView
         tf.keyboardAppearance = .dark
         tf.delegate = self
         return tf
     }()
  
-    
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        becomeFirstResponder()
+//        becomeFirstResponder()becomeFirstResponder()
         return true
     }
     
@@ -146,11 +165,10 @@ class ChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         textField.backgroundColor = .gray
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.layer.borderColor = UIColor.systemBlue.withAlphaComponent(0.3).cgColor
+        textField.layer.borderColor = UIColor.white.withAlphaComponent(0.3).cgColor
         textField.layer.borderWidth = 1
-        textField.backgroundColor = .gray
+        textField.backgroundColor = .darkGray
     }
-    
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -179,14 +197,11 @@ class ChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
        @objc func hideKeyboard() {
         textField.resignFirstResponder()
-           becomeFirstResponder()
-        print("hide")
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MessageCell", for: indexPath) as! MessageCell
-        
-        
+                
         if let font = app.font {
             let string = messages[indexPath.item]
             let textFrame = string.textFrame(font: app.font!)
@@ -212,12 +227,7 @@ class ChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         let string = messages[indexPath.item]
         let textFrame = string.textFrame(font: app.font!)
-        
-        print(textFrame)
-        
+       
         return CGSize(width: screen.width - 40, height: textFrame.height)
-        
-        
     }
-    
 }
